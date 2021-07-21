@@ -1,5 +1,8 @@
 $primaire: #9356DC;
 $secondaire: #FF79DA;
+$quaternaire : #EAEAEA;
+$primaire_light : lighten($color: $primaire, $amount: 3);
+$secondaire_light : lighten($color: $secondaire, $amount: 3);
 
 
 body
@@ -27,7 +30,7 @@ header {
 #barre_recherche {
                  display: flex;
                  justify-content: center;
-                 background-color: rgb(234, 234, 234);
+                 background-color: $quaternaire;
                  padding-top: 15px;
                  padding-bottom: 15px;
                  padding-left: 50px;
@@ -36,7 +39,7 @@ header {
                       border: none; 
                       margin-left: 15px;
                       font-size: 1.1em;
-                      background-color: rgb(234, 234, 234); 
+                      background-color: $quaternaire; 
                  }
 }
 
@@ -63,39 +66,93 @@ header {
                      background: linear-gradient($primaire, $secondaire);
                      box-shadow: 0px 3px 6px #aaa;
                      color: white;
+                     &:hover {
+                        background: linear-gradient($primaire_light, $secondaire_light);
+                       
+            
+                     }
               }
 }
 
 
-#fonctionnement {
+.fonctionnement {
                 padding-top: 20px;
                 padding-bottom: 20px;
                 h2{
                   padding-left: 15px;
                 }
-                .fonctionnement__etape {
-                                       background-color: #F2F2F2; 
-                                       border-radius: 17px;
-                                       box-shadow: 1px 3px 10px #aaa;
-                                       padding-top: 20px;
-                                       padding-bottom: 20px;
-                                       margin: 20px;
-                                       font-weight: bold;
-                                       text-align: cener;
-                                       width : auto;
-                                       span {
-                                            color: gray;
-                                            padding-left: 30px;
-                                            padding-right: 20px;
-                                       }                            
-                                        b{
-                                         color: white;
-                                         background-color: $primaire;
-                                         border-radius: 50%;
-                                         padding: 5px 10px 5px 10px;
-                                         font-size: 0.8em;
-                                         position: absolute;
-                                         left: 3px;
-                                       }
+                &__etape {
+                         background-color: #F2F2F2; 
+                         border-radius: 17px;
+                         box-shadow: 1px 3px 10px #aaa;
+                         padding-top: 20px;
+                         padding-bottom: 20px;
+                         margin: 20px;
+                         font-weight: bold;
+                         text-align: cener;
+                         width : auto;
+                         span {
+                               color: gray;
+                               padding-left: 30px;
+                               padding-right: 20px;
+                        }                            
+                         b {
+                            color: white;
+                            background-color: $primaire;
+                            border-radius: 50%;
+                            padding: 5px 10px 5px 10px;
+                            font-size: 0.8em;
+                            position: absolute;
+                            left: 3px;
+                           }
                 }
+}
+
+
+.restaurant__touscadre {
+                       display: flex;
+                       flex-wrap: wrap;
+                       justify-content: center;                   
+                      .restaurant__grandcadre {
+                                              border-radius: 20px;
+                                              box-shadow: 0px 3px 6px #aaa;
+                                              margin-left: 20px;
+                                              margin-right: 20px;
+                                              margin-bottom: 15px;
+                                              width: 320px;
+                                             .restaurant__petitcadre {
+                                                                     display: flex;
+                                             }
+                                            img {
+                                                height: 150px;
+                                                width: 320px;
+                                                border-top-left-radius: 20px;
+                                                border-top-right-radius: 20px;
+                                                object-fit: cover;
+                                            }
+                      }
+}
+
+
+
+footer {
+       background-color: rgb(53, 53, 53);
+       color: white;
+       padding-top : 15px;
+       padding-left : 15px;
+       padding-bottom : 20px;
+       span {
+            font-style: italic;
+            font-weight: bold; 
+       }
+       ul {
+           padding: 0px;
+           li {
+              list-style-type: none;
+              a {
+                color: white;
+                text-decoration: none;
+              }
+           }
+       }
 }
