@@ -1,0 +1,94 @@
+body {
+  max-width: 1440px;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#barre_recherche {
+  display: flex;
+  justify-content: center;
+  background-color: #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  box-shadow: 0px 5px 5px -3px #aaa inset;
+}
+#barre_recherche input {
+  border: none;
+  margin-left: 15px;
+  font-size: 1.1em;
+  background-color: #eaeaea;
+}
+
+#haut_de_page {
+  background-color: #F2F2F2;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+#haut_de_page h2 {
+  margin-top: 0px;
+  font-size: 1.6em;
+}
+#haut_de_page button {
+  display: block;
+  margin: auto;
+  border: none;
+  border-radius: 30px;
+  margin-top: 30px;
+  padding: 15px 20px 15px 20px;
+  text-align: center;
+  background: linear-gradient(#9356DC, #FF79DA);
+  box-shadow: 0px 3px 6px #aaa;
+  color: white;
+}
+
+#fonctionnement {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#fonctionnement h2 {
+  padding-left: 15px;
+}
+#fonctionnement .fonctionnement__etape {
+  background-color: #F2F2F2;
+  border-radius: 17px;
+  box-shadow: 1px 3px 10px #aaa;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 20px;
+  font-weight: bold;
+  text-align: cener;
+  width: auto;
+}
+#fonctionnement .fonctionnement__etape span {
+  color: gray;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+#fonctionnement .fonctionnement__etape b {
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  padding: 5px 10px 5px 10px;
+  font-size: 0.8em;
+  position: absolute;
+  left: 3px;
+}
+
+/*# sourceMappingURL=P3_accueil.css.map */
