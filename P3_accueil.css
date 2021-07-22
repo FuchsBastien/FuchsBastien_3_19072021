@@ -23,7 +23,7 @@ header img {
   background-color: #EAEAEA;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 50px;
+  padding-left: 60px;
   box-shadow: 0px 5px 5px -3px #aaa inset;
 }
 #barre_recherche input {
@@ -58,7 +58,7 @@ header img {
   color: white;
 }
 #haut_de_page button:hover {
-  background: linear-gradient(#9b63df, #ff88de);
+  background: linear-gradient(#782cd3, #ff46cc);
 }
 
 .fonctionnement {
@@ -68,7 +68,12 @@ header img {
 .fonctionnement h2 {
   padding-left: 15px;
 }
-.fonctionnement__etape {
+.fonctionnement .fonctionnement__tousetape {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.fonctionnement .fonctionnement__tousetape .fonctionnement__etape {
   background-color: #F2F2F2;
   border-radius: 17px;
   box-shadow: 1px 3px 10px #aaa;
@@ -76,22 +81,31 @@ header img {
   padding-bottom: 20px;
   margin: 20px;
   font-weight: bold;
-  text-align: cener;
-  width: auto;
+  width: 320px;
 }
-.fonctionnement__etape span {
+.fonctionnement .fonctionnement__tousetape .fonctionnement__etape:hover {
+  background-color: #F5EDFF;
+}
+.fonctionnement .fonctionnement__tousetape .fonctionnement__etape:hover i {
+  color: #9356DC;
+}
+.fonctionnement .fonctionnement__tousetape .fonctionnement__etape i {
   color: gray;
-  padding-left: 30px;
+  padding-left: 20px;
   padding-right: 20px;
 }
-.fonctionnement__etape b {
+.fonctionnement .fonctionnement__tousetape .fonctionnement__etape b {
   color: white;
   background-color: #9356DC;
   border-radius: 50%;
   padding: 5px 10px 5px 10px;
   font-size: 0.8em;
-  position: absolute;
-  left: 3px;
+  float: left;
+  margin-left: -15px;
+}
+
+h2 {
+  padding-left: 15px;
 }
 
 .restaurant__touscadre {
@@ -109,6 +123,17 @@ header img {
 }
 .restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre {
   display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 15px 10px;
+}
+.restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre i {
+  padding-right: 15px;
+  padding-top: 5px;
+  font-size: 1.3em;
+}
+.restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre span {
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 .restaurant__touscadre .restaurant__grandcadre img {
   height: 150px;
@@ -124,18 +149,24 @@ footer {
   padding-top: 15px;
   padding-left: 15px;
   padding-bottom: 20px;
+  width: auto;
 }
 footer span {
   font-style: italic;
   font-weight: bold;
 }
-footer ul {
-  padding: 0px;
+footer .liens {
+  margin-top: 10px;
 }
-footer ul li {
-  list-style-type: none;
+@media (min-width: 768px) {
+  footer .liens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 20px;
+  }
 }
-footer ul li a {
+footer .liens a {
   color: white;
   text-decoration: none;
 }
