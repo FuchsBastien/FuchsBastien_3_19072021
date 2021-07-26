@@ -74,6 +74,9 @@ main {
   display: flex;
   justify-content: space-between;
 }
+.menu .menu_selection .description {
+  cursor: pointer;
+}
 .menu .menu_selection .description span {
   font-weight: bold;
 }

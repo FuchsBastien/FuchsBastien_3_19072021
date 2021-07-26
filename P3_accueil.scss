@@ -5,186 +5,207 @@ $secondaire_dark : darken($color: $secondaire, $amount: 10);
 $primaire_verylight :#F5EDFF;
 $grisfonce :#EAEAEA;
 $grisclair :#F2F2F2;
-  
+$policetext : 'roboto', sans-serif;
 
-body
-{
-    max-width: 1440px;
-    margin-top : 0px;
-    margin-left : auto;
-    margin-right : auto;
-    align-items : center;
-    font-family: 'Libre Franklin', sans-serif;
+
+body {
+  max-width: 1440px;
+  margin-top : 0px;
+  margin-left : auto;
+  margin-right : auto;
+  align-items : center;
+  font-family: $policetext;
 }
 
 
 header {
-       padding-top: 15px;
-       padding-bottom: 15px;
-       img {
-           display: block;
-           margin-left: auto;
-           margin-right: auto; 
-       }
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+  }
 }
 
 
 #barre_recherche {
-                 display: flex;
-                 justify-content: center;
-                 background-color: $grisfonce;
-                 padding-top: 15px;
-                 padding-bottom: 15px;
-                 padding-left: 60px;
-                 box-shadow: 0px 5px 5px -3px #aaa inset;
-                 input{
-                      border: none; 
-                      margin-left: 15px;
-                      font-size: 1.1em;
-                      background-color: $grisfonce; 
-                 }
+  display: flex;
+  justify-content: center;
+  background-color: $grisfonce;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 60px;
+  box-shadow: 0px 5px 5px -3px #aaa inset;
+
+  input{
+    border: none; 
+    margin-left: 15px;
+    font-size: 1.1em;
+    background-color: $grisfonce; 
+  }
 }
 
 
 #haut_de_page {
-              background-color: $grisclair;
-              padding-top: 30px;
-              padding-bottom: 30px;
-              padding-left : 30px;
-              padding-right: 30px;
-              text-align: center;
-              h2 {
-                 margin-top : 0px;
-                 font-size: 1.6em;
-              }  
-              button {
-                     display: block;
-                     margin : auto;
-                     border: none;
-                     border-radius: 30px;
-                     margin-top: 30px;
-                     padding: 15px 20px 15px 20px;
-                     text-align: center;
-                     background: linear-gradient($primaire, $secondaire);
-                     box-shadow: 0px 3px 6px #aaa;
-                     color: white;
-                     &:hover {
-                             background: linear-gradient($primaire_dark, $secondaire_dark);
-                     }
-              }
+  background-color: $grisclair;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left : 30px;
+  padding-right: 30px;
+  text-align: center;
+
+  h2 {
+    margin-top : 0px;
+    font-size: 1.6em;
+  }  
+
+  button {
+    display: block;
+    margin : auto;
+    border: none;
+    border-radius: 30px;
+    margin-top: 30px;
+    padding: 15px 20px 15px 20px;
+    text-align: center;
+    background: linear-gradient($primaire, $secondaire);
+    box-shadow: 0px 3px 6px #aaa;
+    color: white;
+    &:hover {
+      background: linear-gradient($primaire_dark, $secondaire_dark);
+    }
+  }
 }
 
 
 .fonctionnement {
-                padding-top: 20px;
-                padding-bottom: 20px;
-                h2{
-                  padding-left: 15px;
-                }
-                .fonctionnement__tousetape {
-                  display: flex;
-                  flex-wrap: wrap;
-                  justify-content: center;
-              
-                
-                 
-                 .fonctionnement__etape {
-                         background-color: #F2F2F2; 
-                         border-radius: 17px;
-                         box-shadow: 1px 3px 10px #aaa;
-                         padding-top: 20px;
-                         padding-bottom: 20px;
-                         margin: 20px;
-                         font-weight: bold;
-                         width : 320px;
-                    
-                         &:hover {
-                           background-color: $primaire_verylight;
-                           i {color: $primaire;}
-                         }
-                         i {
-                               color: gray;
-                               padding-left: 20px;
-                               padding-right: 20px;
-                         }                            
-                         b {
-                            color: white;
-                            background-color: $primaire;
-                            border-radius: 50%;
-                            padding: 5px 10px 5px 10px;
-                            font-size: 0.8em;
-                            float: left;
-                            margin-left: -15px;
-                           }
-                   }
-                  }
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+  h2 {
+    padding-left: 15px;
+  }
+
+  .fonctionnement__tousetape {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .fonctionnement__etape {
+      background-color: #F2F2F2; 
+      border-radius: 17px;
+      box-shadow: 1px 3px 10px #aaa;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin: 20px;
+      font-weight: bold;
+      width : 320px;
+      &:hover {
+        background-color: $primaire_verylight;
+        i {color: $primaire;}
+      }
+
+      i {
+        color: gray;
+        padding-left: 20px;
+        padding-right: 20px;
+      }  
+
+      b {
+        color: white;
+        background-color: $primaire;
+        border-radius: 50%;
+        padding: 5px 10px 5px 10px;
+        font-size: 0.8em;
+        float: left;
+        margin-left: -15px;
+      }
+    }
+  }
 }
 
 
-h2 {
-  padding-left: 15px;
-}
-.restaurant__touscadre {
-                       display: flex;
-                       flex-wrap: wrap;
-                       justify-content: center;
-                       
-                      .restaurant__grandcadre {
-                                              border-radius: 20px;
-                                              box-shadow: 0px 3px 6px #aaa;
-                                              margin-left: 20px;
-                                              margin-right: 20px;
-                                              margin-bottom: 15px;
-                                              width: 320px;
-                                             .restaurant__petitcadre {
-                                                                     display: flex;
-                                                                     justify-content: space-between;
-                                                                     padding: 10px 10px 15px 10px;                                      
-                                                                     i {
-                                                                      padding-right: 15px;
-                                                                      padding-top: 5px;
-                                                                  
-                                                                      font-size: 1.3em;                                                                   
-                                                                     }
-                                                                     span {
-                                                                       font-weight: bold;
-                                                                       margin-bottom: 20px;
-                                                                     }                                                                     
-                                             }
-                                            img {
-                                                height: 150px;
-                                                width: 320px;
-                                                border-top-left-radius: 20px;
-                                                border-top-right-radius: 20px;
-                                                object-fit: cover;
-                                            }
-                      }
-}
+#restaurants {
 
+  h2 {
+    padding-left: 15px;
+  }
+
+  .restaurant__touscadre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    .restaurant__grandcadre {
+      border-radius: 20px;
+      box-shadow: 0px 3px 6px #aaa;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 15px;
+      width: 320px;
+
+      img {
+        height: 150px;
+        width: 320px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        object-fit: cover;
+      }
+
+      .restaurant__petitcadre {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 10px 15px 10px;  
+
+        .fa-heart:before {
+          transition: color 10s ease-out;
+        }
+          
+        .fa-heart:hover::before
+        {
+          cursor: pointer;
+          background: linear-gradient($primaire, $secondaire);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: bold;   
+        }                                                                                                     
+                                                                                            
+        span {
+          font-weight: bold;
+          margin-bottom: 20px;
+          cursor: pointer;
+        }                                                                     
+      }
+    }
+  }
+}
 
 
 footer {
-       background-color: rgb(53, 53, 53);
-       color: white;
-       padding-top : 15px;
-       padding-left : 15px;
-       padding-bottom : 20px;
-       width: auto;
-       span {
-            font-style: italic;
-            font-weight: bold; 
-       }
-       .liens {
-              margin-top: 10px;
-              @media (min-width : 768px) {
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-between;
-              padding-right: 20px;
-              }
-              a {
-                color: white;
-                text-decoration: none;
-              }
-       }
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding-top : 15px;
+  padding-left : 15px;
+  padding-bottom : 20px;
+  width: auto;
+
+  span {
+    font-style: italic;
+    font-weight: bold; 
+  }
+
+  .liens {
+    margin-top: 10px;
+    @media (min-width : 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 20px;}
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
 }

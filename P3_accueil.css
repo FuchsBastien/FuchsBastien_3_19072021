@@ -4,7 +4,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   align-items: center;
-  font-family: "Libre Franklin", sans-serif;
+  font-family: "roboto", sans-serif;
 }
 
 header {
@@ -104,16 +104,15 @@ header img {
   margin-left: -15px;
 }
 
-h2 {
+#restaurants h2 {
   padding-left: 15px;
 }
-
-.restaurant__touscadre {
+#restaurants .restaurant__touscadre {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.restaurant__touscadre .restaurant__grandcadre {
+#restaurants .restaurant__touscadre .restaurant__grandcadre {
   border-radius: 20px;
   box-shadow: 0px 3px 6px #aaa;
   margin-left: 20px;
@@ -121,26 +120,32 @@ h2 {
   margin-bottom: 15px;
   width: 320px;
 }
-.restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 10px 15px 10px;
-}
-.restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre i {
-  padding-right: 15px;
-  padding-top: 5px;
-  font-size: 1.3em;
-}
-.restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre span {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.restaurant__touscadre .restaurant__grandcadre img {
+#restaurants .restaurant__touscadre .restaurant__grandcadre img {
   height: 150px;
   width: 320px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   object-fit: cover;
+}
+#restaurants .restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 15px 10px;
+}
+#restaurants .restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre .fa-heart:before {
+  transition: color 10s ease-out;
+}
+#restaurants .restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre .fa-heart:hover::before {
+  cursor: pointer;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+#restaurants .restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre span {
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 footer {
