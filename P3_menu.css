@@ -1,3 +1,17 @@
+@keyframes fill {
+  0%, 25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   max-width: 1440px;
   margin-top: 0px;
@@ -17,7 +31,7 @@ header span {
   margin-top: 8px;
   margin-left: 20px;
 }
-header a {
+header span a {
   color: black;
 }
 header img {
@@ -54,6 +68,17 @@ main {
   font-style: italic;
   font-weight: bold;
 }
+.menu .menu_titre .fa-heart {
+  font-size: 1.3em;
+}
+.menu .menu_titre .fa-heart:hover {
+  cursor: pointer;
+  font-weight: bold;
+  background: linear-gradient(#782cd3, #ff46cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fill 1s ease;
+}
 .menu .menu_selection h5 {
   margin-bottom: 0px;
   margin-left: 15px;
@@ -64,23 +89,63 @@ main {
   margin-left: 15px;
   margin-top: 5px;
 }
-.menu .menu_selection .choix {
+.menu .menu_selection .touschoix {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.menu .menu_selection .touschoix .choix {
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 0px 3px 6px #aaa;
-  width: auto;
-  padding: 10px;
+  width: 340px;
   margin: 10px;
   display: flex;
   justify-content: space-between;
 }
-.menu .menu_selection .description {
-  cursor: pointer;
+.menu .menu_selection .touschoix .choix:hover .animation {
+  tranform: translate(-50px, 0px);
+  width: 60px;
 }
-.menu .menu_selection .description span {
+.menu .menu_selection .touschoix .choix:hover .animation .fa-check-circle {
+  transform: rotate(0deg);
+  opacity: 1;
+}
+.menu .menu_selection .touschoix .choix .description {
+  padding: 15px 10px 15px 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu .menu_selection .touschoix .choix .description span {
   font-weight: bold;
 }
-.menu button {
+.menu .menu_selection .touschoix .choix .prix {
+  padding-top: 36px;
+  padding-right: 20px;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+.menu .menu_selection .touschoix .choix .animation {
+  width: 0px;
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transform: scale(1);
+  padding-top: 20px;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  transition: width 1000ms;
+  position: relative;
+}
+.menu .menu_selection .touschoix .choix .animation .fa-check-circle {
+  transform: rotate(-300deg);
+  transition: transform 1000ms;
+  opacity: 0;
+}
+
+button {
   display: block;
   margin: auto;
   border: none;
@@ -92,7 +157,7 @@ main {
   box-shadow: 0px 3px 6px #aaa;
   color: white;
 }
-.menu button:hover {
+button:hover {
   background: linear-gradient(#782cd3, #ff46cc);
 }
 
@@ -107,6 +172,13 @@ footer {
 footer span {
   font-style: italic;
   font-weight: bold;
+}
+@media (min-width: 768px) {
+  footer span {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 footer .liens {
   margin-top: 10px;

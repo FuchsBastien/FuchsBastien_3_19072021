@@ -1,14 +1,8 @@
 @keyframes fill {
-  0%, 25% {
-    opacity: 0.25;
+  from {
+    opacity: 0;
   }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.75;
-  }
-  100% {
+  to {
     opacity: 1;
   }
 }
@@ -24,7 +18,11 @@ body {
 header {
   padding-top: 15px;
   padding-bottom: 15px;
-  text-align: center;
+}
+header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #barre_recherche {
@@ -149,7 +147,7 @@ header {
   background: linear-gradient(#782cd3, #ff46cc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: fill 1s ease;
+  animation: fill 2s ease;
 }
 #restaurants .restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre span {
   font-weight: bold;
@@ -221,4 +219,4 @@ footer .liens a {
   text-decoration: none;
 }
 
-/*# sourceMappingURL=P3_accueil.css.map */
+/*# sourceMappingURL=P3-accueil.css.map */

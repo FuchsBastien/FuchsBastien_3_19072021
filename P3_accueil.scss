@@ -1,11 +1,17 @@
 $primaire: #9356DC;
 $secondaire: #FF79DA;
-$primaire_dark : darken($color: $primaire, $amount: 10);
-$secondaire_dark : darken($color: $secondaire, $amount: 10);
-$primaire_verylight :#F5EDFF;
+$primaire_dark : darken($primaire, 10);
+$secondaire_dark : darken($secondaire, 10);
+$primaire_light : lighten($primaire, 35);
 $grisfonce :#EAEAEA;
 $grisclair :#F2F2F2;
 $policetext : 'roboto', sans-serif;
+@keyframes fill {
+   0%,25% {opacity: 0.25;}
+   50% {opacity: 0.5;}
+   75% {opacity : 0.75;}
+   100% {opacity: 1;}
+ }
 
 
 body {
@@ -21,12 +27,7 @@ body {
 header {
   padding-top: 15px;
   padding-bottom: 15px;
-
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; 
-  }
+  text-align: center;
 }
 
 
@@ -73,7 +74,7 @@ header {
     box-shadow: 0px 3px 6px #aaa;
     color: white;
     &:hover {
-      background: linear-gradient($primaire_dark, $secondaire_dark);
+      background: linear-gradient(darken($primaire, 10), darken($secondaire, 10));
     }
   }
 }
@@ -102,7 +103,7 @@ header {
       font-weight: bold;
       width : 320px;
       &:hover {
-        background-color: $primaire_verylight;
+        background-color: lighten($primaire, 35);
         i {color: $primaire;}
       }
 
@@ -117,8 +118,6 @@ header {
         background-color: $primaire;
         border-radius: 50%;
         padding: 5px 10px 5px 10px;
-        font-size: 0.8em;
-        float: left;
         margin-left: -15px;
       }
     }
@@ -157,19 +156,20 @@ header {
         display: flex;
         justify-content: space-between;
         padding: 10px 10px 15px 10px;  
-
-        .fa-heart:before {
-          transition: color 10s ease-out;
+      
+    
+        .fa-heart {
+          font-size: 1.3em;
         }
           
-        .fa-heart:hover::before
-        {
+        .fa-heart:hover {
           cursor: pointer;
-          background: linear-gradient($primaire, $secondaire);
+          font-weight: bold; 
+          background: linear-gradient(darken($primaire, 10), darken($secondaire, 10));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          font-weight: bold;   
-        }                                                                                                     
+          animation : fill 1s ease; 
+        }                                                                                                 
                                                                                             
         span {
           font-weight: bold;
@@ -180,6 +180,43 @@ header {
     }
   }
 }
+
+/*
+.fa-heart {
+  font-size: 1.3em;
+  background-color: white;
+  position : relative;
+  z-index: -1;
+  &:hover{
+    &::before{
+     font-weight: 900;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+      opacity: 1;
+    }
+  }
+    &::before {
+   content: "";
+   position : absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;  
+   left: 0;
+   font-weight: 400; 
+   cursor: pointer;
+   opacity: 0;
+   z-index: 1;
+   background: linear-gradient(darken($primaire, 10), darken($secondaire, 10));
+   transition: opacity 250ms;
+  }
+*/
+
+ 
+  
+  
+
+
+
 
 
 footer {
@@ -193,6 +230,10 @@ footer {
   span {
     font-style: italic;
     font-weight: bold; 
+    @media (min-width : 768px) {
+      text-align: center;
+    margin-left: auto;
+    margin-right: auto;}
   }
 
   .liens {
@@ -209,3 +250,5 @@ footer {
     }
   }
 }
+
+
