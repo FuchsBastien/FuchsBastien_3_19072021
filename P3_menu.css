@@ -102,14 +102,16 @@ main {
   margin: 10px;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 .menu .menu_selection .touschoix .choix:hover .animation {
-  tranform: translate(-50px, 0px);
-  width: 60px;
+  width: 70px;
+  cursor: pointer;
+  /*transform: translateX(0%);*/
+  /*transform: scaleX(1);*/
 }
 .menu .menu_selection .touschoix .choix:hover .animation .fa-check-circle {
-  transform: rotate(0deg);
-  opacity: 1;
+  transform: translateX(0) rotate(0deg);
 }
 .menu .menu_selection .touschoix .choix .description {
   padding: 15px 10px 15px 10px;
@@ -136,13 +138,18 @@ main {
   color: white;
   font-size: 1.2em;
   text-align: center;
+  overflow: hidden;
   transition: width 1000ms;
-  position: relative;
+  /*transform: translateX(100%);*/
+  /*transition : transform 1000ms, width 1000ms ;*/
+  /*transition: transform 1000ms;*/
+  /*transform-origin: 100% 50%;*/
+  /*transform: scaleX(0);*/
 }
 .menu .menu_selection .touschoix .choix .animation .fa-check-circle {
-  transform: rotate(-300deg);
+  display: inline-block;
+  transform: translateX(20%) rotate(-200deg);
   transition: transform 1000ms;
-  opacity: 0;
 }
 
 button {
