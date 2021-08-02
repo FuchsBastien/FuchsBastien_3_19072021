@@ -131,8 +131,6 @@ main {
           .animation{
             width: 80px;
             cursor: pointer;
-            /*transform: translateX(0%);*/
-            /*transform: scaleX(1);*/
             .fa-check-circle {
               transform: translateX(0) rotate(0deg);
             } 
@@ -170,12 +168,6 @@ main {
           text-align: center; 
           overflow: hidden;
           transition : width 1000ms;
-          /*transform: translateX(100%);*/
-          /*transition : transform 1000ms, width 1000ms ;*/
-          /*transition: transform 1000ms;*/
-          /*transform-origin: 100% 50%;*/
-          /*transform: scaleX(0);*/
-        
           .fa-check-circle {
             display: inline-block;
             transform : translateX(20%) rotate(-200deg);
@@ -198,8 +190,6 @@ main {
           .animation{
             width: 80px;
             cursor: pointer;
-            /*transform: translateX(0%);*/
-            /*transform: scaleX(1);*/
             .fa-check-circle {
               transform: translateX(0) rotate(0deg);
             } 
@@ -237,12 +227,6 @@ main {
           text-align: center; 
           overflow: hidden;
           transition : width 1000ms;
-          /*transform: translateX(100%);*/
-          /*transition : transform 1000ms, width 1000ms ;*/
-          /*transition: transform 1000ms;*/
-          /*transform-origin: 100% 50%;*/
-          /*transform: scaleX(0);*/
-        
           .fa-check-circle {
             display: inline-block;
             transform : translateX(20%) rotate(-200deg);
@@ -265,8 +249,6 @@ main {
           .animation{
             width: 80px;
             cursor: pointer;
-            /*transform: translateX(0%);*/
-            /*transform: scaleX(1);*/
             .fa-check-circle {
               transform: translateX(0) rotate(0deg);
             } 
@@ -304,12 +286,6 @@ main {
           text-align: center; 
           overflow: hidden;
           transition : width 1000ms;
-          /*transform: translateX(100%);*/
-          /*transition : transform 1000ms, width 1000ms ;*/
-          /*transition: transform 1000ms;*/
-          /*transform-origin: 100% 50%;*/
-          /*transform: scaleX(0);*/
-        
           .fa-check-circle {
             display: inline-block;
             transform : translateX(20%) rotate(-200deg);
@@ -335,6 +311,7 @@ main {
 
     &:hover {
       background: linear-gradient(lighten($secondaire, 5), lighten($primaire, 5));
+      box-shadow: 0px 5px 8px #aaa;
     }
   }
 }

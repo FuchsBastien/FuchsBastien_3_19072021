@@ -74,6 +74,7 @@ header {
     color: white;
     &:hover {
       background: linear-gradient(lighten($secondaire, 5),lighten($primaire, 5));
+      box-shadow: 0px 5px 8px #aaa;
     }
   }
 }
