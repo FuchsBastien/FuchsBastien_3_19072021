@@ -1,7 +1,7 @@
 $primaire: #9356DC;
 $secondaire: #FF79DA;
 $primaire_dark : darken($primaire, 10);
-$secondaire_dark : darken($secondaire, 10);
+$secondaire_dark : lighten($secondaire, 10);
 $primaire_light : lighten($primaire, 35);
 $grisfonce :#EAEAEA;
 $grisclair :#F2F2F2;
@@ -74,7 +74,7 @@ header {
     box-shadow: 0px 3px 6px #aaa;
     color: white;
     &:hover {
-      background: linear-gradient(darken($primaire, 10), darken($secondaire, 10));
+      background: linear-gradient(lighten($primaire, 10), lighten($secondaire, 10));
     }
   }
 }
@@ -161,7 +161,6 @@ header {
         text-decoration: none;  
         }
       
-    
         .fa-heart {
           font-size: 1.3em;
         }

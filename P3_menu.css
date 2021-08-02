@@ -21,7 +21,7 @@
   }
 }
 @keyframes progress_menu_choix_2 {
-  0%, 25% {
+  0%, 20% {
     opacity: 0;
   }
   100% {
@@ -29,7 +29,7 @@
   }
 }
 @keyframes progress_menu_choix_3 {
-  0%, 50% {
+  0%, 40% {
     opacity: 0;
   }
   100% {
@@ -127,7 +127,7 @@ main {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  animation: progress_menu_choix1 2000ms;
+  animation: progress_menu_choix1 1000ms 200ms;
 }
 .menu .menu_selection .touschoix .choix_un:hover .animation {
   width: 80px;
@@ -186,7 +186,7 @@ main {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  animation: progress_menu_choix_2 2000ms;
+  animation: progress_menu_choix_2 1000ms 200ms;
 }
 .menu .menu_selection .touschoix .choix_deux:hover .animation {
   width: 80px;
@@ -245,7 +245,7 @@ main {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  animation: progress_menu_choix_3 2000ms;
+  animation: progress_menu_choix_3 1000ms 200ms;
 }
 .menu .menu_selection .touschoix .choix_trois:hover .animation {
   width: 80px;
