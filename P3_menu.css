@@ -12,7 +12,7 @@
     opacity: 1;
   }
 }
-@keyframes progress_menu_choix1 {
+@keyframes progress_menu1 {
   from {
     opacity: 0;
   }
@@ -20,16 +20,24 @@
     opacity: 1;
   }
 }
-@keyframes progress_menu_choix_2 {
-  0%, 20% {
+@keyframes progress_menu2 {
+  0%, 25% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
 }
-@keyframes progress_menu_choix_3 {
-  0%, 40% {
+@keyframes progress_menu3 {
+  0%, 50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes progress_menu4 {
+  0%, 75% {
     opacity: 0;
   }
   100% {
@@ -64,15 +72,16 @@ header img {
   margin-right: auto;
 }
 
-#banniere img {
+#banniere .restaurant {
+  position: relative;
+  z-index: -1;
   width: 100%;
 }
 
 main {
-  position: absolute;
   width: 100%;
   max-width: 1440px;
-  top: 250px;
+  margin-top: -45px;
 }
 
 .menu {
@@ -118,7 +127,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
 }
-.menu .menu_selection .touschoix .choix_un {
+.menu .menu_selection .touschoix .choix {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 3px 6px #aaa;
@@ -127,32 +136,45 @@ main {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  animation: progress_menu_choix1 1000ms 200ms;
+  opacity: 1;
+  animation: progress_menu1 1000ms;
 }
-.menu .menu_selection .touschoix .choix_un:hover .animation {
+.menu .menu_selection .touschoix .choix:nth-child(2) {
+  animation: progress_menu2 1000ms;
+}
+.menu .menu_selection .touschoix .choix:nth-child(3) {
+  animation: progress_menu3 1000ms;
+}
+.menu .menu_selection .touschoix .choix:nth-child(4) {
+  animation: progress_menu4 1000ms;
+}
+.menu .menu_selection .touschoix .choix:hover {
+  cursor: pointer;
+}
+.menu .menu_selection .touschoix .choix:hover .animation {
   width: 80px;
   cursor: pointer;
 }
-.menu .menu_selection .touschoix .choix_un:hover .animation .fa-check-circle {
+.menu .menu_selection .touschoix .choix:hover .animation .fa-check-circle {
   transform: translateX(0) rotate(0deg);
 }
-.menu .menu_selection .touschoix .choix_un .description {
+.menu .menu_selection .touschoix .choix .description {
   padding: 15px 10px 15px 10px;
   width: 300px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.menu .menu_selection .touschoix .choix_un .description span {
+.menu .menu_selection .touschoix .choix .description span {
   font-weight: bold;
 }
-.menu .menu_selection .touschoix .choix_un .prix {
+.menu .menu_selection .touschoix .choix .prix {
   padding-top: 36px;
   padding-right: 20px;
   font-weight: bold;
   font-size: 0.8em;
 }
-.menu .menu_selection .touschoix .choix_un .animation {
+.menu .menu_selection .touschoix .choix .animation {
   width: 0px;
   background-color: #99E2D0;
   border-top-right-radius: 15px;
@@ -165,111 +187,7 @@ main {
   overflow: hidden;
   transition: width 1000ms;
 }
-.menu .menu_selection .touschoix .choix_un .animation .fa-check-circle {
-  display: inline-block;
-  transform: translateX(20%) rotate(-200deg);
-  transition: transform 1000ms;
-}
-.menu .menu_selection .touschoix .choix_deux {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0px 3px 6px #aaa;
-  width: 340px;
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  animation: progress_menu_choix_2 1000ms 200ms;
-}
-.menu .menu_selection .touschoix .choix_deux:hover .animation {
-  width: 80px;
-  cursor: pointer;
-}
-.menu .menu_selection .touschoix .choix_deux:hover .animation .fa-check-circle {
-  transform: translateX(0) rotate(0deg);
-}
-.menu .menu_selection .touschoix .choix_deux .description {
-  padding: 15px 10px 15px 10px;
-  width: 300px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.menu .menu_selection .touschoix .choix_deux .description span {
-  font-weight: bold;
-}
-.menu .menu_selection .touschoix .choix_deux .prix {
-  padding-top: 36px;
-  padding-right: 20px;
-  font-weight: bold;
-  font-size: 0.8em;
-}
-.menu .menu_selection .touschoix .choix_deux .animation {
-  width: 0px;
-  background-color: #99E2D0;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  transform: scale(1);
-  padding-top: 20px;
-  color: white;
-  font-size: 1.2em;
-  text-align: center;
-  overflow: hidden;
-  transition: width 1000ms;
-}
-.menu .menu_selection .touschoix .choix_deux .animation .fa-check-circle {
-  display: inline-block;
-  transform: translateX(20%) rotate(-200deg);
-  transition: transform 1000ms;
-}
-.menu .menu_selection .touschoix .choix_trois {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0px 3px 6px #aaa;
-  width: 340px;
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  animation: progress_menu_choix_3 1000ms 200ms;
-}
-.menu .menu_selection .touschoix .choix_trois:hover .animation {
-  width: 80px;
-  cursor: pointer;
-}
-.menu .menu_selection .touschoix .choix_trois:hover .animation .fa-check-circle {
-  transform: translateX(0) rotate(0deg);
-}
-.menu .menu_selection .touschoix .choix_trois .description {
-  padding: 15px 10px 15px 10px;
-  width: 300px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.menu .menu_selection .touschoix .choix_trois .description span {
-  font-weight: bold;
-}
-.menu .menu_selection .touschoix .choix_trois .prix {
-  padding-top: 36px;
-  padding-right: 20px;
-  font-weight: bold;
-  font-size: 0.8em;
-}
-.menu .menu_selection .touschoix .choix_trois .animation {
-  width: 0px;
-  background-color: #99E2D0;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  transform: scale(1);
-  padding-top: 20px;
-  color: white;
-  font-size: 1.2em;
-  text-align: center;
-  overflow: hidden;
-  transition: width 1000ms;
-}
-.menu .menu_selection .touschoix .choix_trois .animation .fa-check-circle {
+.menu .menu_selection .touschoix .choix .animation .fa-check-circle {
   display: inline-block;
   transform: translateX(20%) rotate(-200deg);
   transition: transform 1000ms;
@@ -289,6 +207,7 @@ main {
 .menu button:hover {
   background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 0px 5px 8px #aaa;
+  cursor: pointer;
 }
 
 footer {

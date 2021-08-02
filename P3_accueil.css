@@ -1,4 +1,4 @@
-@keyframes fill {
+@keyframes fill_heart {
   0%, 25% {
     opacity: 0.25;
   }
@@ -70,6 +70,7 @@ header {
 #haut_de_page button:hover {
   background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 0px 5px 8px #aaa;
+  cursor: pointer;
 }
 
 .fonctionnement {
@@ -116,6 +117,14 @@ header {
 #restaurants h2 {
   padding-left: 15px;
 }
+#restaurants .image {
+  position: relative;
+}
+#restaurants .image span {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
 #restaurants .restaurant__touscadre {
   display: flex;
   flex-wrap: wrap;
@@ -154,7 +163,7 @@ header {
   background: linear-gradient(#782cd3, #ff46cc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: fill 1s ease;
+  animation: fill_heart 1s ease;
 }
 #restaurants .restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre span {
   font-weight: bold;

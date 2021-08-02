@@ -9,18 +9,26 @@ $secondaire_dark : lighten($color: $secondaire, $amount: 5);
   75% {opacity : 0.75;}
   100% {opacity: 1;}
 }
-@keyframes progress_menu_choix1 {
+@keyframes progress_menu1 {
   from {opacity: 0}
   to {opacity: 1;}
-}
-@keyframes progress_menu_choix_2 {
-  0%,20% {opacity: 0;}
+}  
+
+@keyframes progress_menu2 {
+  0%,25% {opacity: 0;}
   100% {opacity: 1;}
-}
-@keyframes progress_menu_choix_3 {
-  0%,40% {opacity: 0;}
+}  
+
+@keyframes progress_menu3 {
+  0%,50% {opacity: 0;}
   100% {opacity: 1;}
-}
+}  
+
+@keyframes progress_menu4 {
+  0%,75% {opacity: 0;}
+  100% {opacity: 1;}
+}  
+
 
 
 body {
@@ -54,17 +62,21 @@ header {
 }
 
 
-#banniere img {
-  width: 100%;
+#banniere {
+  .restaurant {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+  }
 }
 
 
 main {
-  position: absolute;
   width: 100%;
   max-width: 1440px;
-  top: 250px;
+  margin-top: -45px;
 }
+
 
 
 .menu {    
@@ -117,7 +129,8 @@ main {
       flex-wrap: wrap;
       justify-content: center;
 
-      .choix_un {
+
+      .choix {
         background-color: white; 
         border-radius: 15px;
         box-shadow: 0px 3px 6px #aaa;
@@ -126,8 +139,13 @@ main {
         display: flex;
         justify-content: space-between;
         overflow: hidden;
-        animation: progress_menu_choix1 1000ms 200ms;
+        opacity : 1;
+        animation: progress_menu1 1000ms;
+        &:nth-child(2) {animation: progress_menu2 1000ms}
+        &:nth-child(3) {animation: progress_menu3 1000ms}
+        &:nth-child(4) {animation: progress_menu4 1000ms}
         &:hover {
+          cursor: pointer;
           .animation{
             width: 80px;
             cursor: pointer;
@@ -176,124 +194,6 @@ main {
         } 
       }  
 
-      .choix_deux {
-        background-color: white; 
-        border-radius: 15px;
-        box-shadow: 0px 3px 6px #aaa;
-        width : 340px;
-        margin: 10px;
-        display: flex;
-        justify-content: space-between;
-        overflow: hidden;
-        animation: progress_menu_choix_2 1000ms 200ms;
-        &:hover {
-          .animation{
-            width: 80px;
-            cursor: pointer;
-            .fa-check-circle {
-              transform: translateX(0) rotate(0deg);
-            } 
-          }  
-        }
-    
-        .description {
-          padding : 15px 10px 15px 10px;
-          width: 300px;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-        
-          span {
-            font-weight: bold;                                 
-          }
-        }
-
-        .prix {
-          padding-top : 36px;
-          padding-right : 20px;
-          font-weight: bold;
-          font-size: 0.8em;
-        }
-
-        .animation {
-          width: 0px;
-          background-color: $tertiaire;
-          border-top-right-radius: 15px;
-          border-bottom-right-radius: 15px;
-          transform: scale(1);
-          padding-top: 20px;
-          color : white;
-          font-size: 1.2em;
-          text-align: center; 
-          overflow: hidden;
-          transition : width 1000ms;
-          .fa-check-circle {
-            display: inline-block;
-            transform : translateX(20%) rotate(-200deg);
-            transition: transform 1000ms;
-          }
-        } 
-      }
-
-      .choix_trois {
-        background-color: white; 
-        border-radius: 15px;
-        box-shadow: 0px 3px 6px #aaa;
-        width : 340px;
-        margin: 10px;
-        display: flex;
-        justify-content: space-between;
-        overflow: hidden;
-        animation: progress_menu_choix_3 1000ms 200ms;
-        &:hover {
-          .animation{
-            width: 80px;
-            cursor: pointer;
-            .fa-check-circle {
-              transform: translateX(0) rotate(0deg);
-            } 
-          }  
-        }
-    
-        .description {
-          padding : 15px 10px 15px 10px;
-          width: 300px;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-        
-          span {
-            font-weight: bold;                                 
-          }
-        }
-
-        .prix {
-          padding-top : 36px;
-          padding-right : 20px;
-          font-weight: bold;
-          font-size: 0.8em;
-        }
-
-        .animation {
-          width: 0px;
-          background-color: $tertiaire;
-          border-top-right-radius: 15px;
-          border-bottom-right-radius: 15px;
-          transform: scale(1);
-          padding-top: 20px;
-          color : white;
-          font-size: 1.2em;
-          text-align: center; 
-          overflow: hidden;
-          transition : width 1000ms;
-          .fa-check-circle {
-            display: inline-block;
-            transform : translateX(20%) rotate(-200deg);
-            transition: transform 1000ms;
-          }
-        } 
-      }
-
     }
   }
     
@@ -312,9 +212,11 @@ main {
     &:hover {
       background: linear-gradient(lighten($secondaire, 5), lighten($primaire, 5));
       box-shadow: 0px 5px 8px #aaa;
+      cursor: pointer;
     }
   }
 }
+
 
 
 footer {
