@@ -63,12 +63,12 @@ header {
   margin-top: 30px;
   padding: 15px 20px 15px 20px;
   text-align: center;
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 3px 6px #aaa;
   color: white;
 }
 #haut_de_page button:hover {
-  background: linear-gradient(#ae80e5, #fface8);
+  background: linear-gradient(#ff93e1, #a16be0);
 }
 
 .fonctionnement {

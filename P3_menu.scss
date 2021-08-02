@@ -1,8 +1,8 @@
 $primaire: #9356DC;
 $secondaire: #FF79DA;
 $tertiaire :#99E2D0;
-$primaire_dark : lighten($color: $primaire, $amount: 10);
-$secondaire_dark : lighten($color: $secondaire, $amount: 10);
+$primaire_dark : lighten($color: $primaire, $amount: 5);
+$secondaire_dark : lighten($color: $secondaire, $amount: 5);
 @keyframes fill_heart {
   0%,25% {opacity: 0.25;}
   50% {opacity: 0.5;}
@@ -329,12 +329,12 @@ main {
     margin-top: 30px; 
     padding: 10px 30px 10px 30px;
     text-align: center;
-    background: linear-gradient($primaire, $secondaire);
+    background: linear-gradient($secondaire, $primaire);
     box-shadow: 0px 3px 6px #aaa;
     color: white;
 
     &:hover {
-      background: linear-gradient(lighten($primaire, 5), lighten($secondaire, 5));
+      background: linear-gradient(lighten($secondaire, 5), lighten($primaire, 5));
     }
   }
 }
