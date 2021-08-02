@@ -1,15 +1,26 @@
 $primaire: #9356DC;
 $secondaire: #FF79DA;
 $tertiaire :#99E2D0;
-$primaire_dark : darken($color: $primaire, $amount: 10);
-$secondaire_dark : darken($color: $secondaire, $amount: 10);
-@keyframes fill {
+$primaire_dark : lighten($color: $primaire, $amount: 10);
+$secondaire_dark : lighten($color: $secondaire, $amount: 10);
+@keyframes fill_heart {
   0%,25% {opacity: 0.25;}
   50% {opacity: 0.5;}
   75% {opacity : 0.75;}
   100% {opacity: 1;}
 }
-
+@keyframes progress_menu_choix1 {
+  from {opacity: 0}
+  to {opacity: 1;}
+}
+@keyframes progress_menu_choix_2 {
+  0%,25% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes progress_menu_choix_3 {
+  0%,50% {opacity: 0;}
+  100% {opacity: 1;}
+}
 
 
 body {
@@ -52,7 +63,7 @@ main {
   position: absolute;
   width: 100%;
   max-width: 1440px;
-  top: 290px;
+  top: 250px;
 }
 
 
@@ -84,7 +95,7 @@ main {
       background: linear-gradient(darken($primaire, 10), darken($secondaire, 10));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation : fill 1s ease; 
+      animation : fill_heart 1s ease; 
     }
   }
 
@@ -100,81 +111,216 @@ main {
       margin-left : 15px;
       margin-top : 5px;
     }
-    .touschoix {
+
+    .touschoix{
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-     .choix {
-      background-color: white; 
-      border-radius: 15px;
-      box-shadow: 0px 3px 6px #aaa;
-      width : 340px;
-      margin: 10px;
-      display: flex;
-      justify-content: space-between;
-      overflow: hidden;
-      &:hover {
-        .animation{
-          width: 70px;
-          cursor: pointer;
-          /*transform: translateX(0%);*/
-          /*transform: scaleX(1);*/
-          .fa-check-circle {
-            transform: translateX(0) rotate(0deg) ;
-          } 
-        }  
-      }
-    
-      .description {
-        padding : 15px 10px 15px 10px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        
 
-        span {
-          font-weight: bold;                                 
+      .choix_un {
+        background-color: white; 
+        border-radius: 15px;
+        box-shadow: 0px 3px 6px #aaa;
+        width : 340px;
+        margin: 10px;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        animation: progress_menu_choix1 2000ms;
+        &:hover {
+          .animation{
+            width: 80px;
+            cursor: pointer;
+            /*transform: translateX(0%);*/
+            /*transform: scaleX(1);*/
+            .fa-check-circle {
+              transform: translateX(0) rotate(0deg);
+            } 
+          }  
         }
-      }
-
-      .prix {
-        padding-top : 36px;
-        padding-right : 20px;
-        font-weight: bold;
-        font-size: 0.8em;
-      }
-
-      .animation {
-        width: 0px;
-        background-color: $tertiaire;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        transform: scale(1);
-        padding-top: 20px;
-        color : white;
-        font-size: 1.2em;
-        text-align: center; 
-        overflow: hidden;
-        transition : width 1000ms;
-        /*transform: translateX(100%);*/
-        /*transition : transform 1000ms, width 1000ms ;*/
-        /*transition: transform 1000ms;*/
-        /*transform-origin: 100% 50%;*/
-        /*transform: scaleX(0);*/
+    
+        .description {
+          padding : 15px 10px 15px 10px;
+          width: 300px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
         
-       
-         .fa-check-circle {
-           display: inline-block;
-           transform : translateX(20%) rotate(-200deg);
-           transition: transform 1000ms;
-         }
-       
+          span {
+            font-weight: bold;                                 
+          }
+        }
+
+        .prix {
+          padding-top : 36px;
+          padding-right : 20px;
+          font-weight: bold;
+          font-size: 0.8em;
+        }
+
+        .animation {
+          width: 0px;
+          background-color: $tertiaire;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          transform: scale(1);
+          padding-top: 20px;
+          color : white;
+          font-size: 1.2em;
+          text-align: center; 
+          overflow: hidden;
+          transition : width 1000ms;
+          /*transform: translateX(100%);*/
+          /*transition : transform 1000ms, width 1000ms ;*/
+          /*transition: transform 1000ms;*/
+          /*transform-origin: 100% 50%;*/
+          /*transform: scaleX(0);*/
+        
+          .fa-check-circle {
+            display: inline-block;
+            transform : translateX(20%) rotate(-200deg);
+            transition: transform 1000ms;
+          }
         } 
       }  
+
+      .choix_deux {
+        background-color: white; 
+        border-radius: 15px;
+        box-shadow: 0px 3px 6px #aaa;
+        width : 340px;
+        margin: 10px;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        animation: progress_menu_choix_2 2000ms;
+        &:hover {
+          .animation{
+            width: 80px;
+            cursor: pointer;
+            /*transform: translateX(0%);*/
+            /*transform: scaleX(1);*/
+            .fa-check-circle {
+              transform: translateX(0) rotate(0deg);
+            } 
+          }  
+        }
+    
+        .description {
+          padding : 15px 10px 15px 10px;
+          width: 300px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        
+          span {
+            font-weight: bold;                                 
+          }
+        }
+
+        .prix {
+          padding-top : 36px;
+          padding-right : 20px;
+          font-weight: bold;
+          font-size: 0.8em;
+        }
+
+        .animation {
+          width: 0px;
+          background-color: $tertiaire;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          transform: scale(1);
+          padding-top: 20px;
+          color : white;
+          font-size: 1.2em;
+          text-align: center; 
+          overflow: hidden;
+          transition : width 1000ms;
+          /*transform: translateX(100%);*/
+          /*transition : transform 1000ms, width 1000ms ;*/
+          /*transition: transform 1000ms;*/
+          /*transform-origin: 100% 50%;*/
+          /*transform: scaleX(0);*/
+        
+          .fa-check-circle {
+            display: inline-block;
+            transform : translateX(20%) rotate(-200deg);
+            transition: transform 1000ms;
+          }
+        } 
+      }
+
+      .choix_trois {
+        background-color: white; 
+        border-radius: 15px;
+        box-shadow: 0px 3px 6px #aaa;
+        width : 340px;
+        margin: 10px;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        animation: progress_menu_choix_3 2000ms;
+        &:hover {
+          .animation{
+            width: 80px;
+            cursor: pointer;
+            /*transform: translateX(0%);*/
+            /*transform: scaleX(1);*/
+            .fa-check-circle {
+              transform: translateX(0) rotate(0deg);
+            } 
+          }  
+        }
+    
+        .description {
+          padding : 15px 10px 15px 10px;
+          width: 300px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        
+          span {
+            font-weight: bold;                                 
+          }
+        }
+
+        .prix {
+          padding-top : 36px;
+          padding-right : 20px;
+          font-weight: bold;
+          font-size: 0.8em;
+        }
+
+        .animation {
+          width: 0px;
+          background-color: $tertiaire;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          transform: scale(1);
+          padding-top: 20px;
+          color : white;
+          font-size: 1.2em;
+          text-align: center; 
+          overflow: hidden;
+          transition : width 1000ms;
+          /*transform: translateX(100%);*/
+          /*transition : transform 1000ms, width 1000ms ;*/
+          /*transition: transform 1000ms;*/
+          /*transform-origin: 100% 50%;*/
+          /*transform: scaleX(0);*/
+        
+          .fa-check-circle {
+            display: inline-block;
+            transform : translateX(20%) rotate(-200deg);
+            transition: transform 1000ms;
+          }
+        } 
+      }
+
     }
   }
-  }
-
+    
   button {
     display: block;
     margin : auto;
@@ -188,9 +334,10 @@ main {
     color: white;
 
     &:hover {
-      background: linear-gradient(darken($primaire, 10), darken($secondaire, 10));
+      background: linear-gradient(lighten($primaire, 5), lighten($secondaire, 5));
     }
   }
+}
 
 
 footer {

@@ -140,6 +140,10 @@ header {
   justify-content: space-between;
   padding: 10px 10px 15px 10px;
 }
+#restaurants .restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre a {
+  color: black;
+  text-decoration: none;
+}
 #restaurants .restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre .fa-heart {
   font-size: 1.3em;
 }
