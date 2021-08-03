@@ -77,6 +77,12 @@ header img {
   z-index: -1;
   width: 100%;
 }
+@media (min-width: 768px) {
+  #banniere .restaurant {
+    height: 400px;
+    object-fit: cover;
+  }
+}
 
 main {
   width: 100%;
