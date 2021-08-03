@@ -1,17 +1,33 @@
 $primaire: #9356DC;
 $secondaire: #FF79DA;
 $tertiaire : #99E2D0;
-$primaire_dark : lighten($color: $primaire, $amount: 5);
-$secondaire_dark : lighten($color: $secondaire, $amount: 5);
+$primaire_light : lighten($color: $primaire, $amount: 5);
+$secondaire_light : lighten($color: $secondaire, $amount: 5);
 $grisfonce :#EAEAEA;
 $grisclair :#F2F2F2;
 $policetext : 'roboto', sans-serif;
+
+$loader_dur : 2000ms;
+$loader_container_delay : $loader_dur;
+
+
 @keyframes fill_heart {
-   0%,25% {opacity: 0.25;}
-   50% {opacity: 0.5;}
-   75% {opacity : 0.75;}
-   100% {opacity: 1;}
- }
+  0%,25% {opacity: 0.25;}
+  50% {opacity: 0.5;}
+  75% {opacity : 0.75;}
+  100% {opacity: 1;}
+}
+
+@keyframes loader_container {
+  0% {transform: translateX(0px);}
+  100% {transform: translateX(-9999px);}
+
+}
+@keyframes loader {
+  0% {transform: translate(-50%,-50%) rotate(0deg);}
+  100% {transform: translate(-50%,-50%) rotate(360deg);}
+}   
+
 
 
 body {
@@ -21,6 +37,30 @@ body {
   margin-right : auto;
   align-items : center;
   font-family: $policetext;
+}
+
+
+.loader_container {
+  position: fixed;
+  top : 0;
+  left : 0;
+  width: 100%;
+  height : 100%;
+  z-index : 1;
+  animation : loader_container 0ms $loader_container_delay forwards;
+
+  .loader {
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    height: 120px;
+    width : 120px;
+    border-radius: 50%;
+    border : 16px solid $primaire;
+    border-top: 16px solid $secondaire;
+    border-bottom : 16px solid $secondaire;
+    animation : loader $loader_dur linear infinite; 
+  }
 }
 
 
