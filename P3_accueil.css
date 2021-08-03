@@ -53,9 +53,8 @@ body {
   height: 120px;
   width: 120px;
   border-radius: 50%;
-  border: 16px solid #9356DC;
-  border-top: 16px solid #FF79DA;
-  border-bottom: 16px solid #FF79DA;
+  border-top: 16px double #FF79DA;
+  border-bottom: 16px double #9356DC;
   animation: loader 2000ms linear infinite;
 }
 

@@ -29,7 +29,6 @@ $loader_container_delay : $loader_dur;
 }   
 
 
-
 body {
   max-width: 1440px;
   margin-top : 0px;
@@ -56,9 +55,8 @@ body {
     height: 120px;
     width : 120px;
     border-radius: 50%;
-    border : 16px solid $primaire;
-    border-top: 16px solid $secondaire;
-    border-bottom : 16px solid $secondaire;
+    border-top: 16px double $secondaire;
+    border-bottom : 16px double $primaire;
     animation : loader $loader_dur linear infinite; 
   }
 }
