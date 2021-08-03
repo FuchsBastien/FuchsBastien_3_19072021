@@ -124,6 +124,11 @@ header {
   position: absolute;
   top: 15px;
   right: 15px;
+  padding: 5px 10px 5px 10px;
+  color: #278870;
+  background-color: #99E2D0;
+  font-weight: bold;
+  font-size: 0.8em;
 }
 #restaurants .restaurant__touscadre {
   display: flex;
