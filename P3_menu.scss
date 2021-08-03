@@ -3,6 +3,7 @@ $secondaire: #FF79DA;
 $tertiaire :#99E2D0;
 $primaire_dark : lighten($color: $primaire, $amount: 5);
 $secondaire_dark : lighten($color: $secondaire, $amount: 5);
+
 @keyframes fill_heart {
   0%,25% {opacity: 0.25;}
   50% {opacity: 0.5;}
@@ -28,7 +29,6 @@ $secondaire_dark : lighten($color: $secondaire, $amount: 5);
   0%,75% {opacity: 0;}
   100% {opacity: 1;}
 }  
-
 
 
 body {
