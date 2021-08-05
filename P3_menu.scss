@@ -69,6 +69,8 @@ header {
     position: relative;
     z-index: -1;
     width: 100%;
+    height: 250px;
+    object-fit: cover;
     @media (min-width : 768px) {
       height : 400px;
       object-fit: cover;
@@ -125,7 +127,7 @@ main {
 
     .bordure {
       border-bottom : 2px solid $tertiaire;
-      width: 10%;
+      width: 35px;
       margin-left : 15px;
       margin-top : 5px;
     }
@@ -145,7 +147,7 @@ main {
         display: flex;
         justify-content: space-between;
         overflow: hidden;
-        opacity : 0;
+        opacity : 1;
         animation: progress_menu1 1000ms;
         &:nth-child(2) {animation: progress_menu2 1000ms}
         &:nth-child(3) {animation: progress_menu3 1000ms}
