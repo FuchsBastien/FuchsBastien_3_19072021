@@ -20,6 +20,14 @@
     opacity: 1;
   }
 }
+@keyframes encoche {
+  from {
+    transform: translateX(20%) rotate(-200deg);
+  }
+  to {
+    transform: translateX(0) rotate(0deg);
+  }
+}
 body {
   max-width: 1440px;
   margin-top: 0px;
@@ -139,7 +147,7 @@ main {
   cursor: pointer;
 }
 .menu .menu_selection .touschoix .choix:hover .animation .fa-check-circle {
-  transform: translateX(0) rotate(0deg);
+  animation: encoche 1000ms;
 }
 .menu .menu_selection .touschoix .choix .description {
   padding: 15px 10px 15px 10px;
@@ -172,8 +180,6 @@ main {
 }
 .menu .menu_selection .touschoix .choix .animation .fa-check-circle {
   display: inline-block;
-  transform: translateX(20%) rotate(-200deg);
-  transition: transform 1000ms;
 }
 .menu button {
   display: block;

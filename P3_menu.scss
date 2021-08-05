@@ -17,6 +17,11 @@ $menu_dur : 1000ms;
   to {opacity: 1;}
 }  
 
+@keyframes encoche {
+  from {transform : translateX(20%) rotate(-200deg)}
+  to {transform: translateX(0) rotate(0deg)}
+}  
+
 
 body {
   max-width: 1440px;
@@ -142,7 +147,7 @@ main {
             width: 80px;
             cursor: pointer;
             .fa-check-circle {
-              transform: translateX(0) rotate(0deg);
+              animation: encoche 1000ms;
             } 
           }  
         }
@@ -180,8 +185,6 @@ main {
           transition : width 1000ms;
           .fa-check-circle {
             display: inline-block;
-            transform : translateX(20%) rotate(-200deg);
-            transition: transform 1000ms;
           }
         } 
       }  
