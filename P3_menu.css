@@ -12,35 +12,11 @@
     opacity: 1;
   }
 }
-@keyframes progress_menu1 {
+@keyframes progress_menu {
   from {
     opacity: 0;
   }
   to {
-    opacity: 1;
-  }
-}
-@keyframes progress_menu2 {
-  0%, 25% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes progress_menu3 {
-  0%, 50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes progress_menu4 {
-  0%, 75% {
-    opacity: 0;
-  }
-  100% {
     opacity: 1;
   }
 }
@@ -144,17 +120,16 @@ main {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  opacity: 1;
-  animation: progress_menu1 1000ms;
+  animation: progress_menu 1000ms both;
 }
 .menu .menu_selection .touschoix .choix:nth-child(2) {
-  animation: progress_menu2 1000ms;
+  animation: progress_menu 1000ms 250ms both;
 }
 .menu .menu_selection .touschoix .choix:nth-child(3) {
-  animation: progress_menu3 1000ms;
+  animation: progress_menu 1000ms 500ms both;
 }
 .menu .menu_selection .touschoix .choix:nth-child(4) {
-  animation: progress_menu4 1000ms;
+  animation: progress_menu 1000ms 750ms both;
 }
 .menu .menu_selection .touschoix .choix:hover {
   cursor: pointer;
