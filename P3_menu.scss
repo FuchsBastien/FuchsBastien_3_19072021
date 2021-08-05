@@ -99,7 +99,7 @@ main {
       font-size: 1.3em;
     }
 
-    .fa-heart:active {
+    .fa-heart:hover {
       cursor: pointer;
       font-weight: bold; 
       background: linear-gradient(darken($primaire, 10), darken($secondaire, 10));
@@ -141,11 +141,10 @@ main {
         &:nth-child(2) {animation: progress_menu $menu_dur $menu_dur*0.25 both}
         &:nth-child(3) {animation: progress_menu $menu_dur $menu_dur*0.5 both}
         &:nth-child(4) {animation: progress_menu $menu_dur $menu_dur*0.75 both}
-        &:active {
+        &:hover {
           cursor: pointer;
           .animation {
             width: 80px;
-            cursor: pointer;
             .fa-check-circle {
               animation: encoche 1000ms;
             } 
@@ -172,7 +171,7 @@ main {
         }
 
         .animation {
-          width: 0px;
+          
           background-color: $tertiaire;
           border-top-right-radius: 15px;
           border-bottom-right-radius: 15px;
@@ -183,6 +182,7 @@ main {
           text-align: center; 
           overflow: hidden;
           transition : width 1000ms;
+          width: 0px;
           .fa-check-circle {
             display: inline-block;
           }

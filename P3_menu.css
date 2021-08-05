@@ -96,7 +96,7 @@ main {
 .menu .menu_titre .fa-heart {
   font-size: 1.3em;
 }
-.menu .menu_titre .fa-heart:active {
+.menu .menu_titre .fa-heart:hover {
   cursor: pointer;
   font-weight: bold;
   background: linear-gradient(#782cd3, #ff46cc);
@@ -139,14 +139,13 @@ main {
 .menu .menu_selection .touschoix .choix:nth-child(4) {
   animation: progress_menu 1000ms 750ms both;
 }
-.menu .menu_selection .touschoix .choix:active {
+.menu .menu_selection .touschoix .choix:hover {
   cursor: pointer;
 }
-.menu .menu_selection .touschoix .choix:active .animation {
+.menu .menu_selection .touschoix .choix:hover .animation {
   width: 80px;
-  cursor: pointer;
 }
-.menu .menu_selection .touschoix .choix:active .animation .fa-check-circle {
+.menu .menu_selection .touschoix .choix:hover .animation .fa-check-circle {
   animation: encoche 1000ms;
 }
 .menu .menu_selection .touschoix .choix .description {
@@ -166,7 +165,6 @@ main {
   font-size: 0.8em;
 }
 .menu .menu_selection .touschoix .choix .animation {
-  width: 0px;
   background-color: #99E2D0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -177,6 +175,7 @@ main {
   text-align: center;
   overflow: hidden;
   transition: width 1000ms;
+  width: 0px;
 }
 .menu .menu_selection .touschoix .choix .animation .fa-check-circle {
   display: inline-block;
