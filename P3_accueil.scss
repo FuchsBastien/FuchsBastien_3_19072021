@@ -46,6 +46,8 @@ body {
   width: 100%;
   height : 100%;
   z-index : 1;
+  background-color: gray;
+  opacity: 0.5;
   animation : loader_container 0ms $loader_container_delay forwards;
 
   .loader {
