@@ -99,7 +99,7 @@ main {
       font-size: 1.3em;
     }
 
-    .fa-heart:hover {
+    .fa-heart:active {
       cursor: pointer;
       font-weight: bold; 
       background: linear-gradient(darken($primaire, 10), darken($secondaire, 10));

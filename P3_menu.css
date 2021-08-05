@@ -96,7 +96,7 @@ main {
 .menu .menu_titre .fa-heart {
   font-size: 1.3em;
 }
-.menu .menu_titre .fa-heart:hover {
+.menu .menu_titre .fa-heart:active {
   cursor: pointer;
   font-weight: bold;
   background: linear-gradient(#782cd3, #ff46cc);
