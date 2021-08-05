@@ -174,6 +174,11 @@ header {
   flex-wrap: wrap;
   justify-content: center;
 }
+@media (min-width: 768px) {
+  #restaurants .restaurant__touscadre {
+    justify-content: space-around;
+  }
+}
 #restaurants .restaurant__touscadre .restaurant__grandcadre {
   border-radius: 20px;
   box-shadow: 0px 3px 6px #aaa;
@@ -182,12 +187,30 @@ header {
   margin-bottom: 15px;
   width: 320px;
 }
+@media (min-width: 1095px) {
+  #restaurants .restaurant__touscadre .restaurant__grandcadre {
+    width: auto;
+    margin-bottom: 50px;
+  }
+}
 #restaurants .restaurant__touscadre .restaurant__grandcadre img {
   height: 150px;
   width: 320px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   object-fit: cover;
+}
+@media (max-width: 320px) {
+  #restaurants .restaurant__touscadre .restaurant__grandcadre img {
+    height: 130px;
+    width: 280px;
+  }
+}
+@media (min-width: 1096px) {
+  #restaurants .restaurant__touscadre .restaurant__grandcadre img {
+    height: 250px;
+    width: 500px;
+  }
 }
 #restaurants .restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre {
   display: flex;
