@@ -270,19 +270,19 @@ footer {
   span {
     font-style: italic;
     font-weight: bold; 
-    @media (min-width : 768px) {
+    /*@media (min-width : 768px) {
       text-align: center;
     margin-left: auto;
-    margin-right: auto;}
+    margin-right: auto;}*/
   }
 
   .liens {
     margin-top: 10px;
-    @media (min-width : 768px) {
+    /*@media (min-width : 768px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-right: 20px;}
+    padding-right: 20px;}*/
 
     a {
       color: white;
