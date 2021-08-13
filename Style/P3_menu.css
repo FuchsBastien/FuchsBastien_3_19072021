@@ -34,7 +34,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   align-items: center;
-  font-family: "Libre Franklin", sans-serif;
+  font-family: "roboto", sans-serif;
+}
+body h2 {
+  font-family: "Shrikhand", sans serif;
 }
 
 header {

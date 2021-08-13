@@ -5,6 +5,8 @@ $gray_light :#F2F2F2;
 $gray : #353535;
 $primaire_dark : lighten($color: $violet, $amount: 5);
 $secondaire_dark : lighten($color: $pink, $amount: 5);
+$policetext : 'roboto', sans-serif;
+$policetitle : 'Shrikhand', sans serif;
 $menu_dur : 1000ms;
 
 @keyframes fill_heart {
@@ -31,7 +33,10 @@ body {
   margin-left : auto;
   margin-right : auto;
   align-items : center;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: $policetext;
+  h2 {
+    font-family: $policetitle;  
+  }
 }
 
 header {
