@@ -1,8 +1,8 @@
-$primaire: #9356DC;
-$secondaire: #FF79DA;
-$tertiaire : #99E2D0;
-$primaire_light : lighten($color: $primaire, $amount: 5);
-$secondaire_light : lighten($color: $secondaire, $amount: 5);
+$violet: #9356DC;
+$pink: #FF79DA;
+$green : #99E2D0;
+$violet_light : lighten($color: $violet, $amount: 5);
+$pink_light : lighten($color: $pink, $amount: 5);
 $grisfonce :#EAEAEA;
 $grisclair :#F2F2F2;
 $policetext : 'roboto', sans-serif;
@@ -55,8 +55,8 @@ body {
     height: 120px;
     width : 120px;
     border-radius: 50%;
-    border-top: 16px double $secondaire;
-    border-bottom : 16px double $primaire;
+    border-top: 16px double $pink;
+    border-bottom : 16px double $violet;
     animation : loader $loader_dur linear infinite; 
   }
 }
@@ -109,11 +109,11 @@ header {
       margin-top: 30px;
       padding: 15px 20px 15px 20px;
       text-align: center;
-      background: linear-gradient($secondaire, $primaire);
+      background: linear-gradient($pink, $violet);
       box-shadow: 0px 3px 6px #aaa;
       color: white;
       &:hover {
-        background: linear-gradient(lighten($secondaire, 5),lighten($primaire, 5));
+        background: linear-gradient(lighten($pink, 5),lighten($violet, 5));
         box-shadow: 0px 5px 8px #aaa;
         cursor: pointer;
       }
@@ -145,8 +145,8 @@ header {
       font-weight: bold;
       width : 320px;
       &:hover {
-        background-color: lighten($primaire, 35);
-        i {color: $primaire;}
+        background-color: lighten($violet, 35);
+        i {color: $violet;}
       }
 
       i {
@@ -157,7 +157,7 @@ header {
 
       b {
         color: white;
-        background-color: $primaire;
+        background-color: $violet;
         border-radius: 50%;
         padding: 5px 10px 5px 10px;
         margin-left: -15px;
@@ -179,8 +179,8 @@ header {
       top : 15px;
       right: 15px;
       padding: 5px 10px 5px 10px;
-      color: darken($tertiaire, 40);
-      background-color: $tertiaire;
+      color: darken($green, 40);
+      background-color: $green;
       font-weight: bold;
       font-size: 00.8em;
     }
@@ -242,7 +242,7 @@ header {
         .fa-heart:hover {
           cursor: pointer;
           font-weight: bold; 
-          background: linear-gradient(darken($primaire, 10), darken($secondaire, 10));
+          background: linear-gradient(darken($violet, 10), darken($pink, 10));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           animation : fill_heart 1s ease; 
