@@ -152,6 +152,9 @@ header #haut_de_page button:hover {
   margin-left: -15px;
 }
 
+#restaurants {
+  background-color: #F2F2F2;
+}
 #restaurants h2 {
   padding-left: 15px;
 }
