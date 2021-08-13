@@ -3,8 +3,9 @@ $pink: #FF79DA;
 $green : #99E2D0;
 $violet_light : lighten($color: $violet, $amount: 5);
 $pink_light : lighten($color: $pink, $amount: 5);
-$grisfonce :#EAEAEA;
-$grisclair :#F2F2F2;
+$gray_dark :#EAEAEA;
+$gray_light :#F2F2F2;
+$gray : #353535;
 $policetext : 'roboto', sans-serif;
 $loader_dur : 2000ms;
 $loader_container_delay : $loader_dur;
@@ -74,7 +75,7 @@ header {
   #barre_recherche {
     display: flex;
     justify-content: center;
-    background-color: $grisfonce;
+    background-color: $gray_dark;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 60px;
@@ -84,12 +85,12 @@ header {
       border: none; 
       margin-left: 15px;
       font-size: 1.1em;
-      background-color: $grisfonce; 
+      background-color: $gray_dark; 
     }
   }
 
   #haut_de_page {
-    background-color: $grisclair;
+    background-color: $gray_light;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left : 30px;
@@ -136,7 +137,7 @@ header {
     justify-content: center;
 
     .fonctionnement__etape {
-      background-color: #F2F2F2; 
+      background-color: $gray_light; 
       border-radius: 17px;
       box-shadow: 1px 3px 10px #aaa;
       padding-top: 20px;
@@ -168,7 +169,7 @@ header {
 
 
 #restaurants {
-  background-color:#F2F2F2 ;
+  background-color:$gray_light ;
   h2 {
     padding-left: 15px;
   }
@@ -261,7 +262,7 @@ header {
 
 
 footer {
-  background-color: rgb(53, 53, 53);
+  background-color: $gray;
   color: white;
   padding-top : 15px;
   padding-left : 15px;
