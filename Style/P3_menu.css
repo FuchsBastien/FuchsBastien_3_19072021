@@ -230,6 +230,13 @@ footer .liens {
   justify-content: space-between;
   padding-right: 20px;}*/
 }
+footer .liens .fa-utensils {
+  padding-right: 3px;
+}
+footer .liens .fa-hands-helping {
+  font-size: 12px;
+  padding-right: 1px;
+}
 footer .liens a {
   color: white;
   text-decoration: none;
