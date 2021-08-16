@@ -145,9 +145,11 @@ header {
       margin: 20px;
       font-weight: bold;
       width : 320px;
-      &:hover {
+      
+      &--violet:hover {
         background-color: lighten($violet, 35);
         i {color: $violet;}
+     
       }
 
       i {
@@ -248,9 +250,7 @@ header {
           font-weight: bold; 
           background: linear-gradient(darken($violet, 10), darken($pink, 10));
           -webkit-background-clip: text;
-          -moz-background-clip: text;
           -webkit-text-fill-color: transparent;
-          -moz-background-clip: text;
           animation : fill_heart 1s ease; 
         }                                                                                                 
                                                                                             

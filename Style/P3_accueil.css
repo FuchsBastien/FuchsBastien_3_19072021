@@ -133,10 +133,10 @@ header #haut_de_page button:hover {
   font-weight: bold;
   width: 320px;
 }
-.fonctionnement .fonctionnement__tousetape .fonctionnement__etape:hover {
+.fonctionnement .fonctionnement__tousetape .fonctionnement__etape--violet:hover {
   background-color: #f2eafb;
 }
-.fonctionnement .fonctionnement__tousetape .fonctionnement__etape:hover i {
+.fonctionnement .fonctionnement__tousetape .fonctionnement__etape--violet:hover i {
   color: #9356DC;
 }
 .fonctionnement .fonctionnement__tousetape .fonctionnement__etape i {
@@ -233,9 +233,7 @@ header #haut_de_page button:hover {
   font-weight: bold;
   background: linear-gradient(#782cd3, #ff46cc);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
   animation: fill_heart 1s ease;
 }
 #restaurants .restaurant__touscadre .restaurant__grandcadre .restaurant__petitcadre span {
